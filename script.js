@@ -86,9 +86,10 @@ function revealCell(r, c) {
     revealedCount++;
 
     if (board[r][c].mine) {
-        alert('Game Over!');
+        
         // renderBoard();
         startGame();
+        alert('Game Over!');
         return;
     }
 
@@ -101,8 +102,9 @@ function revealCell(r, c) {
     }
 
     if (revealedCount === rows * cols - mines) {
-        alert('You Win!');
+        document.querySelector(".vin_text").classList.remove('hidden');
         renderBoard();
+        alert('You Win!');
         return;
     }
 
