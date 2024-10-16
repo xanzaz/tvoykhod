@@ -2,15 +2,10 @@ const grid = document.querySelector('.grid');
 const rows = 10;
 const cols = 10;
 const mines = 10;
-const screenWidth = window.screen.width;
-
-console.log(screenWidth);
 
 let board = [];
 let revealedCount = 0;
 let flaggedCount = 0;
-let whedthblock;
-
 
 
 function createBoard() {
@@ -144,19 +139,3 @@ grid.addEventListener('contextmenu', (event) => {
 createBoard();
 renderBoard();
 
-if (screenWidth<430)
-    {
-        whedthblock= screenWidth/(cols+2);
-        
-        div_game = document.querySelector(".grid");
-        div_game.style.setProperty('grid-template-columns', 'repeat(10,'+ whedthblock+'px)');
-        div_game.style.setProperty('grid-template-rows', 'repeat(10,'+ whedthblock+'px)');
-        cells = document.querySelectorAll('.cell');
-        console.log(cells)
-        cells.forEach(element => {
-            element.style.setProperty("width", whedthblock.toString()+"px");
-            element.style.setProperty("height", whedthblock.toString() +"px");
-        });
-        
-        
-    }

@@ -60,3 +60,19 @@ body {
     content: '🚩';
     font-size: 24px;
 }
+
+@media (max-width: 600px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(10, 20px);
+        grid-template-rows: repeat(10, 20px);
+        gap: 2px;
+    }
+    
+    .cell {
+        
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+    }
+}
