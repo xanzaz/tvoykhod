@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    background-image: url(img/fon.png);
+    flex-direction: column;
+}
+.logo 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+
+}
+.logotx
+{
+    height: 150px;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    grid-template-rows: repeat(10, 40px);
+    gap: 2px;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    background-color: #ccc;
+    border: 1px solid #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.cell.revealed {
+    background-color: #eee;
+    border-color: #ddd;
+}
+
+.cell.mine {
+    background-color: red;
+}
+
+.cell.flagged::after {
+    content: '🚩';
+    font-size: 24px;
+}
