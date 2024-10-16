@@ -87,7 +87,8 @@ function revealCell(r, c) {
 
     if (board[r][c].mine) {
         alert('Game Over!');
-        renderBoard();
+        // renderBoard();
+        startGame();
         return;
     }
 
@@ -136,6 +137,14 @@ grid.addEventListener('contextmenu', (event) => {
     toggleFlag(row, col);
 });
 
-createBoard();
-renderBoard();
 
+function startGame()
+{
+    board = [];
+    revealedCount = 0;
+    flaggedCount = 0;
+    createBoard();
+    renderBoard();    
+}
+
+startGame();

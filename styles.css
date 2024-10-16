@@ -64,15 +64,15 @@ body {
 @media (max-width: 600px) {
     .grid {
         display: grid;
-        grid-template-columns: repeat(10, 20px);
-        grid-template-rows: repeat(10, 20px);
+        grid-template-columns: repeat(10, 25px);
+        grid-template-rows: repeat(10, 25px);
         gap: 2px;
     }
     
     .cell {
         
-        width: 20px;
-        height: 20px;
+        width: 25px;
+        height: 25px;
         font-size: 12px;
     }
 }
